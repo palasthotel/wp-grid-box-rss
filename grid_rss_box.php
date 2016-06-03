@@ -3,15 +3,15 @@
 /**
  * Plugin Name: Grid RSS Box
  * Plugin URI: https://github.com/palasthotel/wp-grid-box-rss
- * Description: Helps layouting pages with containerist.
- * Version: 1.6
- * Author: Palasthotel <rezeption@palasthotel.de> (in person: Benjamin Birkenhake, Edward Bock, Enno Welbers)
+ * Description: RSS feed box for Grid.
+ * Version: 1.0
+ * Author: Palasthotel <rezeption@palasthotel.de> (in person: Edward Bock)
  * Author URI: http://www.palasthotel.de
  * Requires at least: 4.0
  * Tested up to: 4.5.1
  * License: http://www.gnu.org/licenses/gpl-3.0.html GPLv3
  * @copyright Copyright (c) 2014, Palasthotel
- * @package Palasthotel\Grid-WordPress
+ * @package Palasthotel\Grid-WordPress-RSS-Box
  */
 
 class GridRSSBox {
@@ -28,7 +28,7 @@ class GridRSSBox {
    * load grid box classes
    */
   public function load_classes(){
-	require "boxes/grid-disqus-popular-box.inc";
+	require dirname(__FILE__)."/grid-rss-box/grid_rss_box.php";
   }
 
   /**
@@ -42,4 +42,7 @@ class GridRSSBox {
   }
 }
 
+/**
+ * construct plugin
+ */
 new GridRSSBox();
