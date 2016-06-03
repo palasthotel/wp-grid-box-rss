@@ -1,0 +1,3 @@
+[submodule "grid-rss-box"]
+	path = grid-rss-box
+	url = git@github.com:palasthotel/grid-rss-box.git
