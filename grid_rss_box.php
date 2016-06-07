@@ -29,6 +29,9 @@ class GridRSSBox {
    */
   public function load_classes(){
 	require dirname(__FILE__)."/grid-rss-box/grid_rss_box.php";
+	$dirs = wp_upload_dir();
+	grid_rss_box::$CACHE_DIR = $dirs["basedir"]."/grid_rss_cache/";
+
   }
 
   /**
